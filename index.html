@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shriram Smart Kids | Preschool in Chomu, Jaipur</title>
+    <meta
+      name="description"
+      content="Shriram Smart Kids is a joyful preschool in Krishna Vihar Bhojlawā, Chomu, Jaipur, Rajasthan, offering safe and creative early childhood education."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              skybrand: '#0ea5e9',
+              orangewarm: '#f97316',
+              yellowaccent: '#facc15',
+              darktext: '#0f172a'
+            },
+            boxShadow: {
+              soft: '0 10px 30px rgba(14, 165, 233, 0.12)'
+            },
+            animation: {
+              float: 'float 5s ease-in-out infinite',
+              pulseSoft: 'pulseSoft 4s ease-in-out infinite'
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-12px)' }
+              },
+              pulseSoft: {
+                '0%, 100%': { transform: 'scale(1)', opacity: 0.9 },
+                '50%': { transform: 'scale(1.08)', opacity: 1 }
+              }
+            }
+          }
+        }
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hero-bg {
+        background: radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.25), transparent 35%),
+          radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.2), transparent 30%),
+          linear-gradient(135deg, #e0f2fe 0%, #fff7ed 45%, #fef9c3 100%);
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+      }
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-sky-50 text-darktext antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50">
+      <nav class="mx-auto mt-3 max-w-7xl rounded-2xl border border-sky-100 bg-white/90 px-5 py-3 shadow-soft backdrop-blur">
+        <div class="flex items-center justify-between">
+          <a href="#home" class="flex items-center gap-3">
+            <div class="grid h-12 w-12 place-content-center rounded-xl bg-skybrand text-white shadow-lg">
+              <i class="fa-solid fa-school text-lg"></i>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-skybrand">Preschool</p>
+              <h1 class="text-lg font-bold">Shriram Smart Kids</h1>
+            </div>
+          </a>
+
+          <ul class="hidden items-center gap-6 text-sm font-medium lg:flex">
+            <li><a class="transition hover:text-skybrand" href="#home">Home</a></li>
+            <li><a class="transition hover:text-skybrand" href="#about">About</a></li>
+            <li><a class="transition hover:text-skybrand" href="#programs">Programs</a></li>
+            <li><a class="transition hover:text-skybrand" href="#activities">Activities</a></li>
+            <li><a class="transition hover:text-skybrand" href="#facilities">Facilities</a></li>
+            <li><a class="transition hover:text-skybrand" href="#gallery">Gallery</a></li>
+            <li><a class="transition hover:text-skybrand" href="#admissions">Admissions</a></li>
+            <li><a class="transition hover:text-skybrand" href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="flex items-center gap-3">
+            <a
+              href="#admissions"
+              class="hidden rounded-full bg-orangewarm px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-105 hover:bg-orange-600 lg:inline-flex"
+              >Admissions Open</a
+            >
+            <button id="menuBtn" class="rounded-lg border border-sky-100 p-2 text-skybrand lg:hidden">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden pt-4 lg:hidden">
+          <div class="grid gap-2 rounded-xl bg-sky-50 p-4 text-sm font-medium">
+            <a href="#home" class="rounded-lg px-3 py-2 hover:bg-white">Home</a>
+            <a href="#about" class="rounded-lg px-3 py-2 hover:bg-white">About</a>
+            <a href="#programs" class="rounded-lg px-3 py-2 hover:bg-white">Programs</a>
+            <a href="#activities" class="rounded-lg px-3 py-2 hover:bg-white">Activities</a>
+            <a href="#facilities" class="rounded-lg px-3 py-2 hover:bg-white">Facilities</a>
+            <a href="#gallery" class="rounded-lg px-3 py-2 hover:bg-white">Gallery</a>
+            <a href="#admissions" class="rounded-lg px-3 py-2 hover:bg-white">Admissions</a>
+            <a href="#contact" class="rounded-lg px-3 py-2 hover:bg-white">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-bg relative min-h-screen overflow-hidden px-5 pt-36">
+        <div class="absolute left-10 top-32 text-yellowaccent/70 animate-float"><i class="fa-solid fa-star text-3xl"></i></div>
+        <div class="absolute right-16 top-44 text-skybrand/70 animate-pulseSoft"><i class="fa-solid fa-puzzle-piece text-4xl"></i></div>
+        <div class="absolute bottom-32 left-1/4 text-orangewarm/70 animate-float"><i class="fa-solid fa-music text-3xl"></i></div>
+        <div class="absolute bottom-20 right-20 text-skybrand/70 animate-pulseSoft"><i class="fa-solid fa-book-open-reader text-4xl"></i></div>
+
+        <div class="mx-auto grid max-w-7xl items-center gap-14 py-14 lg:grid-cols-2">
+          <div class="reveal">
+            <span class="mb-5 inline-flex rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-skybrand shadow-soft">
+              Building Bright Futures Since 2014
+            </span>
+            <h2 class="text-4xl font-extrabold leading-tight text-darktext sm:text-5xl lg:text-6xl">
+              Welcome to <span class="text-skybrand">Shriram Smart Kids</span>
+            </h2>
+            <p class="mt-6 max-w-xl text-lg text-slate-700">
+              A joyful place where little minds learn, explore, and grow with creativity in a secure,
+              caring, and inspiring preschool environment.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#admissions" class="rounded-full bg-orangewarm px-7 py-3 text-sm font-bold text-white shadow-lg transition hover:-translate-y-1 hover:bg-orange-600">Admissions Open</a>
+              <a href="#programs" class="rounded-full border-2 border-skybrand px-7 py-3 text-sm font-bold text-skybrand transition hover:-translate-y-1 hover:bg-skybrand hover:text-white">Explore Programs</a>
+            </div>
+          </div>
+
+          <div class="reveal rounded-3xl bg-white/80 p-8 shadow-soft backdrop-blur">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="rounded-2xl bg-sky-100 p-5">
+                <i class="fa-solid fa-child-reaching text-2xl text-skybrand"></i>
+                <p class="mt-3 text-sm font-semibold">Child-Centered Learning</p>
+              </div>
+              <div class="rounded-2xl bg-orange-100 p-5">
+                <i class="fa-solid fa-shield-heart text-2xl text-orangewarm"></i>
+                <p class="mt-3 text-sm font-semibold">Safe & Caring Campus</p>
+              </div>
+              <div class="rounded-2xl bg-yellow-100 p-5">
+                <i class="fa-solid fa-palette text-2xl text-amber-500"></i>
+                <p class="mt-3 text-sm font-semibold">Creative Activities</p>
+              </div>
+              <div class="rounded-2xl bg-emerald-100 p-5">
+                <i class="fa-solid fa-graduation-cap text-2xl text-emerald-500"></i>
+                <p class="mt-3 text-sm font-semibold">Early Skill Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="px-5 py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-12 text-center reveal">
+            <p class="text-sm font-bold uppercase tracking-widest text-skybrand">About Us</p>
+            <h3 class="mt-3 text-3xl font-extrabold sm:text-4xl">Nurturing Curiosity With Care</h3>
+            <p class="mx-auto mt-4 max-w-3xl text-slate-600">
+              At Shriram Smart Kids, we blend play, foundational learning, and life skills in a warm preschool
+              ecosystem designed for joyful childhood development.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="programs" class="bg-white px-5 py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10 reveal text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-orangewarm">Educational Programs</p>
+            <h3 class="mt-3 text-3xl font-extrabold sm:text-4xl">Age-Appropriate Learning Journeys</h3>
+          </div>
+          <div class="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+            <article class="reveal rounded-3xl bg-sky-50 p-8 shadow-soft transition hover:-translate-y-2">
+              <i class="fa-solid fa-seedling text-4xl text-skybrand"></i>
+              <h4 class="mt-5 text-2xl font-bold">Playgroup</h4>
+              <p class="mt-3 text-slate-600">A gentle introduction to social interaction, sensory play, and joyful routines for tiny learners.</p>
+            </article>
+            <article class="reveal rounded-3xl bg-orange-50 p-8 shadow-soft transition hover:-translate-y-2">
+              <i class="fa-solid fa-book text-4xl text-orangewarm"></i>
+              <h4 class="mt-5 text-2xl font-bold">Nursery</h4>
+              <p class="mt-3 text-slate-600">Building language, motor skills, and basic numeracy through stories, songs, and guided activities.</p>
+            </article>
+            <article class="reveal rounded-3xl bg-yellow-50 p-8 shadow-soft transition hover:-translate-y-2">
+              <i class="fa-solid fa-lightbulb text-4xl text-yellow-500"></i>
+              <h4 class="mt-5 text-2xl font-bold">Kindergarten</h4>
+              <p class="mt-3 text-slate-600">School-readiness with confidence through engaging academics, creative expression, and teamwork.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-5 py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10 reveal text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-skybrand">Why Choose Us</p>
+            <h3 class="mt-3 text-3xl font-extrabold sm:text-4xl">A Preschool Families Trust</h3>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-lock text-2xl text-skybrand"></i><h4 class="mt-3 font-bold">Safe Campus</h4></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-wand-magic-sparkles text-2xl text-orangewarm"></i><h4 class="mt-3 font-bold">Creative Learning</h4></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-chalkboard-user text-2xl text-yellow-500"></i><h4 class="mt-3 font-bold">Experienced Teachers</h4></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-basketball text-2xl text-emerald-500"></i><h4 class="mt-3 font-bold">Fun Activities</h4></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-display text-2xl text-indigo-500"></i><h4 class="mt-3 font-bold">Smart Classrooms</h4></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-hand-holding-heart text-2xl text-pink-500"></i><h4 class="mt-3 font-bold">Personal Attention</h4></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="activities" class="bg-white px-5 py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10 reveal text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-orangewarm">Learning Activities</p>
+            <h3 class="mt-3 text-3xl font-extrabold sm:text-4xl">Hands-On Discovery Every Day</h3>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="reveal rounded-2xl bg-gradient-to-br from-pink-100 to-pink-50 p-6 transition hover:scale-[1.02]"><i class="fa-solid fa-paintbrush text-3xl text-pink-500"></i><p class="mt-4 font-semibold">Art & Craft</p></div>
+            <div class="reveal rounded-2xl bg-gradient-to-br from-orange-100 to-orange-50 p-6 transition hover:scale-[1.02]"><i class="fa-solid fa-music text-3xl text-orangewarm"></i><p class="mt-4 font-semibold">Music & Dance</p></div>
+            <div class="reveal rounded-2xl bg-gradient-to-br from-indigo-100 to-indigo-50 p-6 transition hover:scale-[1.02]"><i class="fa-solid fa-book-open text-3xl text-indigo-500"></i><p class="mt-4 font-semibold">Storytelling</p></div>
+            <div class="reveal rounded-2xl bg-gradient-to-br from-yellow-100 to-yellow-50 p-6 transition hover:scale-[1.02]"><i class="fa-solid fa-puzzle-piece text-3xl text-yellow-500"></i><p class="mt-4 font-semibold">Puzzle Learning</p></div>
+            <div class="reveal rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-50 p-6 transition hover:scale-[1.02]"><i class="fa-solid fa-futbol text-3xl text-emerald-500"></i><p class="mt-4 font-semibold">Outdoor Games</p></div>
+            <div class="reveal rounded-2xl bg-gradient-to-br from-sky-100 to-sky-50 p-6 transition hover:scale-[1.02]"><i class="fa-solid fa-brain text-3xl text-skybrand"></i><p class="mt-4 font-semibold">Creative Thinking</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="facilities" class="px-5 py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10 reveal text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-skybrand">Facilities</p>
+            <h3 class="mt-3 text-3xl font-extrabold sm:text-4xl">Designed for Comfort, Safety & Exploration</h3>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1"><i class="fa-solid fa-book-atlas text-2xl text-skybrand"></i><p class="mt-3 font-semibold">Kids Library</p></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1"><i class="fa-solid fa-cubes text-2xl text-orangewarm"></i><p class="mt-3 font-semibold">Indoor Play Area</p></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1"><i class="fa-solid fa-shapes text-2xl text-yellow-500"></i><p class="mt-3 font-semibold">Activity Room</p></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1"><i class="fa-solid fa-tablet-screen-button text-2xl text-indigo-500"></i><p class="mt-3 font-semibold">Digital Learning</p></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1"><i class="fa-solid fa-van-shuttle text-2xl text-emerald-500"></i><p class="mt-3 font-semibold">Transportation</p></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1"><i class="fa-solid fa-tree-city text-2xl text-green-500"></i><p class="mt-3 font-semibold">Healthy Environment</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-skybrand px-5 py-20 text-white">
+        <div class="mx-auto grid max-w-7xl gap-6 text-center sm:grid-cols-2 lg:grid-cols-4">
+          <div class="reveal rounded-2xl bg-white/10 p-6"><p class="counter text-4xl font-extrabold" data-target="500">0</p><p class="mt-2">Happy Students</p></div>
+          <div class="reveal rounded-2xl bg-white/10 p-6"><p class="counter text-4xl font-extrabold" data-target="20">0</p><p class="mt-2">Teachers</p></div>
+          <div class="reveal rounded-2xl bg-white/10 p-6"><p class="counter text-4xl font-extrabold" data-target="10">0</p><p class="mt-2">Years Experience</p></div>
+          <div class="reveal rounded-2xl bg-white/10 p-6"><p class="counter text-4xl font-extrabold" data-target="100">0</p><p class="mt-2">Safe Campus</p></div>
+        </div>
+      </section>
+
+      <section class="bg-white px-5 py-20">
+        <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
+          <div class="reveal">
+            <p class="text-sm font-bold uppercase tracking-widest text-orangewarm">Learning Approach</p>
+            <h3 class="mt-3 text-3xl font-extrabold sm:text-4xl">Play, Practice, Progress</h3>
+            <p class="mt-5 text-slate-600">
+              Our curriculum integrates playful exploration, structured foundational concepts, social-emotional learning,
+              and guided routines to prepare children for formal schooling with confidence.
+            </p>
+            <ul class="mt-6 space-y-3 text-slate-700">
+              <li><i class="fa-solid fa-circle-check mr-2 text-skybrand"></i>Inquiry-based classroom moments</li>
+              <li><i class="fa-solid fa-circle-check mr-2 text-skybrand"></i>Balanced academics + creativity</li>
+              <li><i class="fa-solid fa-circle-check mr-2 text-skybrand"></i>Personalized teacher guidance</li>
+            </ul>
+          </div>
+          <div class="reveal rounded-3xl bg-gradient-to-br from-sky-100 to-orange-100 p-10 text-center">
+            <i class="fa-solid fa-children text-8xl text-skybrand"></i>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="px-5 py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10 reveal text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-skybrand">Gallery</p>
+            <h3 class="mt-3 text-3xl font-extrabold sm:text-4xl">Moments of Joyful Learning</h3>
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="reveal group rounded-2xl bg-white p-8 text-center shadow-soft transition hover:-translate-y-1"><i class="fa-solid fa-image text-5xl text-skybrand transition group-hover:scale-110"></i></div>
+            <div class="reveal group rounded-2xl bg-white p-8 text-center shadow-soft transition hover:-translate-y-1"><i class="fa-solid fa-camera-retro text-5xl text-orangewarm transition group-hover:scale-110"></i></div>
+            <div class="reveal group rounded-2xl bg-white p-8 text-center shadow-soft transition hover:-translate-y-1"><i class="fa-solid fa-icons text-5xl text-yellow-500 transition group-hover:scale-110"></i></div>
+            <div class="reveal group rounded-2xl bg-white p-8 text-center shadow-soft transition hover:-translate-y-1"><i class="fa-solid fa-heart text-5xl text-pink-500 transition group-hover:scale-110"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="admissions" class="bg-gradient-to-r from-sky-500 to-cyan-400 px-5 py-20 text-white">
+        <div class="mx-auto max-w-7xl rounded-3xl bg-white/10 p-10 backdrop-blur">
+          <div class="reveal text-center">
+            <p class="text-sm font-bold uppercase tracking-widest">Admissions Open</p>
+            <h3 class="mt-3 text-3xl font-extrabold sm:text-4xl">Join the Shriram Smart Kids Family</h3>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div class="reveal rounded-2xl bg-white/15 p-5 text-center"><i class="fa-solid fa-circle-info text-2xl"></i><p class="mt-3 font-semibold">1. Inquiry</p></div>
+            <div class="reveal rounded-2xl bg-white/15 p-5 text-center"><i class="fa-solid fa-file-signature text-2xl"></i><p class="mt-3 font-semibold">2. Registration</p></div>
+            <div class="reveal rounded-2xl bg-white/15 p-5 text-center"><i class="fa-solid fa-comments text-2xl"></i><p class="mt-3 font-semibold">3. Interaction</p></div>
+            <div class="reveal rounded-2xl bg-white/15 p-5 text-center"><i class="fa-solid fa-circle-check text-2xl"></i><p class="mt-3 font-semibold">4. Confirmation</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white px-5 py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10 reveal text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-orangewarm">Testimonials</p>
+            <h3 class="mt-3 text-3xl font-extrabold sm:text-4xl">What Parents Say</h3>
+          </div>
+          <div class="relative overflow-hidden">
+            <div id="testimonialTrack" class="flex transition duration-500">
+              <article class="w-full shrink-0 rounded-3xl bg-sky-50 p-8 shadow-soft">
+                <p class="text-lg italic text-slate-700">“My child loves going to school every day. The teachers are caring and the activities are wonderful.”</p>
+                <p class="mt-4 font-bold">— Parent of Nursery Student</p>
+              </article>
+              <article class="w-full shrink-0 rounded-3xl bg-orange-50 p-8 shadow-soft">
+                <p class="text-lg italic text-slate-700">“We have seen amazing growth in communication and confidence. Highly recommended preschool in Chomu.”</p>
+                <p class="mt-4 font-bold">— Parent of Kindergarten Student</p>
+              </article>
+              <article class="w-full shrink-0 rounded-3xl bg-yellow-50 p-8 shadow-soft">
+                <p class="text-lg italic text-slate-700">“A safe, clean, and joyful environment where children are truly understood and nurtured.”</p>
+                <p class="mt-4 font-bold">— Parent of Playgroup Student</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="px-5 py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10 reveal text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-skybrand">Contact Us</p>
+            <h3 class="mt-3 text-3xl font-extrabold sm:text-4xl">Visit Our Preschool Campus</h3>
+          </div>
+          <div class="grid gap-8 lg:grid-cols-2">
+            <div class="reveal rounded-3xl bg-white p-8 shadow-soft">
+              <h4 class="text-xl font-bold">Shriram Smart Kids</h4>
+              <p class="mt-4 text-slate-600">Krishna Vihar Bhojlawā<br />Chomu, Jaipur, Rajasthan</p>
+              <p class="mt-4"><i class="fa-solid fa-phone mr-2 text-skybrand"></i>+91 98765 43210</p>
+              <p class="mt-2"><i class="fa-solid fa-envelope mr-2 text-skybrand"></i>hello@shriramsmartkids.com</p>
+            </div>
+            <form class="reveal rounded-3xl bg-white p-8 shadow-soft">
+              <div class="grid gap-4">
+                <input class="rounded-xl border border-sky-100 p-3 focus:outline-none focus:ring-2 focus:ring-sky-300" type="text" placeholder="Name" />
+                <input class="rounded-xl border border-sky-100 p-3 focus:outline-none focus:ring-2 focus:ring-sky-300" type="tel" placeholder="Phone" />
+                <input class="rounded-xl border border-sky-100 p-3 focus:outline-none focus:ring-2 focus:ring-sky-300" type="text" placeholder="Child Age" />
+                <textarea class="rounded-xl border border-sky-100 p-3 focus:outline-none focus:ring-2 focus:ring-sky-300" rows="4" placeholder="Message"></textarea>
+                <button type="button" class="rounded-full bg-orangewarm px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Send Inquiry</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-5 pb-20">
+        <div class="mx-auto max-w-7xl overflow-hidden rounded-3xl shadow-soft reveal">
+          <iframe
+            title="Shriram Smart Kids Location"
+            class="h-80 w-full"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Chomu%20Jaipur%20Rajasthan&output=embed"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900 px-5 py-14 text-slate-200">
+      <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="grid h-10 w-10 place-content-center rounded-lg bg-skybrand text-white"><i class="fa-solid fa-school"></i></div>
+            <p class="font-bold">Shriram Smart Kids</p>
+          </div>
+          <p class="mt-4 text-sm text-slate-400">Empowering early learners with care, creativity, and confidence.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white">Quick Links</h4>
+          <ul class="mt-4 space-y-2 text-sm text-slate-400">
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white">Contact Info</h4>
+          <p class="mt-4 text-sm text-slate-400">Krishna Vihar Bhojlawā, Chomu, Jaipur, Rajasthan</p>
+          <p class="mt-2 text-sm text-slate-400">+91 98765 43210</p>
+          <p class="mt-2 text-sm text-slate-400">hello@shriramsmartkids.com</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white">Newsletter</h4>
+          <div class="mt-4 flex rounded-full bg-white p-1">
+            <input class="w-full rounded-full px-3 text-sm text-slate-700 focus:outline-none" placeholder="Your email" />
+            <button class="rounded-full bg-orangewarm px-4 py-2 text-xs font-semibold text-white">Subscribe</button>
+          </div>
+          <div class="mt-4 flex gap-3 text-lg">
+            <a href="#" class="text-slate-400 transition hover:text-sky-400"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-slate-400 transition hover:text-pink-400"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-slate-400 transition hover:text-red-400"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+      const counterElements = document.querySelectorAll('.counter');
+      const counterObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const target = Number(el.dataset.target);
+            let current = 0;
+            const step = Math.ceil(target / 45);
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              el.textContent = `${current}+`;
+            }, 35);
+            counterObserver.unobserve(el);
+          });
+        },
+        { threshold: 0.5 }
+      );
+      counterElements.forEach((counter) => counterObserver.observe(counter));
+
+      const track = document.getElementById('testimonialTrack');
+      let testimonialIndex = 0;
+      setInterval(() => {
+        testimonialIndex = (testimonialIndex + 1) % 3;
+        track.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+      }, 4000);
+    </script>
+  </body>
+</html>
