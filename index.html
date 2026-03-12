@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shriram Smart Kids | Preschool in Chomu, Jaipur</title>
+    <meta
+      name="description"
+      content="Shriram Smart Kids is a modern preschool in Krishna Vihar Bhojlawā, Chomu, Jaipur, Rajasthan offering joyful, safe, and creative learning for children."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandBlue: '#1d9bf0',
+              brandOrange: '#f97316',
+              brandYellow: '#facc15',
+              textDark: '#0f172a'
+            },
+            boxShadow: {
+              soft: '0 12px 30px rgba(2, 132, 199, 0.14)'
+            },
+            keyframes: {
+              float: {
+                '0%,100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-12px)' }
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '200% center' },
+                '100%': { backgroundPosition: '-200% center' }
+              }
+            },
+            animation: {
+              float: 'float 4s ease-in-out infinite',
+              shimmer: 'shimmer 8s linear infinite'
+            }
+          }
+        }
+      };
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #f0f9ff;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(110deg, rgba(2, 132, 199, 0.78), rgba(249, 115, 22, 0.62));
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.84);
+        backdrop-filter: blur(8px);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+    </style>
+  </head>
+
+  <body class="text-textDark antialiased">
+    <header class="fixed inset-x-0 top-0 z-50">
+      <nav class="mx-auto mt-3 max-w-7xl rounded-2xl border border-sky-100 bg-white/90 px-5 py-3 shadow-soft backdrop-blur">
+        <div class="flex items-center justify-between">
+          <a href="#home" class="flex items-center gap-3">
+            <div class="grid h-12 w-12 place-content-center rounded-xl bg-brandBlue text-white">
+              <i class="fa-solid fa-school text-lg"></i>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-widest text-brandBlue">Preschool</p>
+              <h1 class="text-lg font-extrabold leading-tight">Shriram Smart Kids</h1>
+            </div>
+          </a>
+
+          <ul class="hidden items-center gap-5 text-sm font-semibold lg:flex">
+            <li><a href="#home" class="hover:text-brandBlue">Home</a></li>
+            <li><a href="#about" class="hover:text-brandBlue">About</a></li>
+            <li><a href="#programs" class="hover:text-brandBlue">Programs</a></li>
+            <li><a href="#facilities" class="hover:text-brandBlue">Facilities</a></li>
+            <li><a href="#activities" class="hover:text-brandBlue">Activities</a></li>
+            <li><a href="#gallery" class="hover:text-brandBlue">Gallery</a></li>
+            <li><a href="#admissions" class="hover:text-brandBlue">Admissions</a></li>
+            <li><a href="#events" class="hover:text-brandBlue">Events</a></li>
+            <li><a href="#contact" class="hover:text-brandBlue">Contact</a></li>
+          </ul>
+
+          <div class="flex items-center gap-3">
+            <a
+              href="#admissions"
+              class="hidden rounded-full bg-brandOrange px-5 py-2.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-orange-600 lg:inline-flex"
+              >Admissions Open</a
+            >
+            <button id="menuBtn" class="rounded-lg border border-sky-200 p-2 text-brandBlue lg:hidden">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden pt-4 lg:hidden">
+          <div class="grid gap-2 rounded-xl bg-sky-50 p-3 text-sm font-semibold">
+            <a href="#home" class="rounded-lg px-3 py-2 hover:bg-white">Home</a>
+            <a href="#about" class="rounded-lg px-3 py-2 hover:bg-white">About</a>
+            <a href="#programs" class="rounded-lg px-3 py-2 hover:bg-white">Programs</a>
+            <a href="#facilities" class="rounded-lg px-3 py-2 hover:bg-white">Facilities</a>
+            <a href="#activities" class="rounded-lg px-3 py-2 hover:bg-white">Activities</a>
+            <a href="#gallery" class="rounded-lg px-3 py-2 hover:bg-white">Gallery</a>
+            <a href="#admissions" class="rounded-lg px-3 py-2 hover:bg-white">Admissions</a>
+            <a href="#events" class="rounded-lg px-3 py-2 hover:bg-white">Events</a>
+            <a href="#contact" class="rounded-lg px-3 py-2 hover:bg-white">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="relative min-h-screen overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1800&q=80"
+          alt="Children learning in classroom"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="hero-overlay absolute inset-0"></div>
+
+        <div class="absolute left-8 top-36 text-white/80 animate-float"><i class="fa-solid fa-star text-3xl"></i></div>
+        <div class="absolute right-10 top-44 text-brandYellow animate-float"><i class="fa-solid fa-puzzle-piece text-4xl"></i></div>
+        <div class="absolute bottom-24 left-1/4 text-white/85 animate-float"><i class="fa-solid fa-music text-3xl"></i></div>
+
+        <div class="relative mx-auto flex min-h-screen max-w-7xl items-center px-5 pt-28">
+          <div class="max-w-3xl reveal text-white">
+            <p class="inline-flex rounded-full bg-white/20 px-4 py-2 text-xs font-bold uppercase tracking-widest">
+              Welcome to Joyful Learning
+            </p>
+            <h2 class="mt-6 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
+              Welcome to Shriram Smart Kids
+            </h2>
+            <p class="mt-5 max-w-2xl text-lg text-white/90">
+              A joyful place where little minds learn, explore and grow.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#admissions" class="rounded-full bg-brandOrange px-7 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-orange-600">Admissions Open</a>
+              <a href="#programs" class="rounded-full border-2 border-white px-7 py-3 text-sm font-bold text-white transition hover:bg-white hover:text-brandBlue">Explore Programs</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="px-5 py-24">
+        <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
+          <div class="reveal">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandBlue">About School</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">A Caring Preschool Community in Chomu</h3>
+            <p class="mt-5 text-slate-700">
+              Shriram Smart Kids is dedicated to building a strong foundation during the most important years of a
+              child’s life. Our learning model blends creativity, structured play, communication skills, and emotional
+              development in a safe and engaging environment.
+            </p>
+            <p class="mt-4 text-slate-700">
+              Located at Krishna Vihar Bhojlawā, Chomu, Jaipur, Rajasthan, we provide a nurturing atmosphere where every
+              child is seen, supported, and inspired to become a confident learner.
+            </p>
+            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+              <div class="rounded-xl bg-white p-4 shadow-soft"><i class="fa-solid fa-shield-heart text-brandBlue"></i> Safe Environment</div>
+              <div class="rounded-xl bg-white p-4 shadow-soft"><i class="fa-solid fa-brain text-brandOrange"></i> Skill Building</div>
+            </div>
+          </div>
+          <div class="reveal overflow-hidden rounded-3xl shadow-soft">
+            <img
+              src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=80"
+              alt="Teacher with kids in preschool"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="programs" class="bg-white px-5 py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-10 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandOrange">Our Programs</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Age-Wise Learning Programs</h3>
+          </div>
+
+          <div class="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+            <article class="reveal overflow-hidden rounded-3xl bg-sky-50 shadow-soft transition hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80" alt="Playgroup" class="h-44 w-full object-cover" />
+              <div class="p-6">
+                <i class="fa-solid fa-seedling text-3xl text-brandBlue"></i>
+                <h4 class="mt-4 text-2xl font-bold">Playgroup</h4>
+                <p class="mt-2 text-slate-600">Sensory play, social connection, and joyful early routines for tiny learners.</p>
+              </div>
+            </article>
+
+            <article class="reveal overflow-hidden rounded-3xl bg-orange-50 shadow-soft transition hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Nursery" class="h-44 w-full object-cover" />
+              <div class="p-6">
+                <i class="fa-solid fa-book-open-reader text-3xl text-brandOrange"></i>
+                <h4 class="mt-4 text-2xl font-bold">Nursery</h4>
+                <p class="mt-2 text-slate-600">Language, numbers, and motor skills through stories, songs, and playful tasks.</p>
+              </div>
+            </article>
+
+            <article class="reveal overflow-hidden rounded-3xl bg-yellow-50 shadow-soft transition hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=80" alt="Kindergarten" class="h-44 w-full object-cover" />
+              <div class="p-6">
+                <i class="fa-solid fa-lightbulb text-3xl text-yellow-500"></i>
+                <h4 class="mt-4 text-2xl font-bold">Kindergarten</h4>
+                <p class="mt-2 text-slate-600">School-readiness with confidence, curiosity, and collaborative learning.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-5 py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-10 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandBlue">Why Choose Our School</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Trusted by Parents, Loved by Kids</h3>
+          </div>
+
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-lock text-brandBlue"></i><h4 class="mt-3 font-bold">Safe Campus</h4></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-wand-magic-sparkles text-brandOrange"></i><h4 class="mt-3 font-bold">Creative Learning</h4></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-chalkboard-user text-yellow-500"></i><h4 class="mt-3 font-bold">Qualified Teachers</h4></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-face-smile text-emerald-500"></i><h4 class="mt-3 font-bold">Fun Activities</h4></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-building text-indigo-500"></i><h4 class="mt-3 font-bold">Modern Facilities</h4></div>
+            <div class="reveal rounded-2xl bg-white p-6 shadow-soft"><i class="fa-solid fa-hand-holding-heart text-pink-500"></i><h4 class="mt-3 font-bold">Personal Attention</h4></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="facilities" class="bg-white px-5 py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-10 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandOrange">Facilities</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Modern Spaces for Better Learning</h3>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <article class="reveal overflow-hidden rounded-2xl bg-sky-50 shadow-soft">
+              <img src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=900&q=80" alt="Smart Classroom" class="h-40 w-full object-cover" />
+              <div class="p-5"><i class="fa-solid fa-display text-brandBlue"></i><h4 class="mt-2 font-bold">Smart Classrooms</h4></div>
+            </article>
+            <article class="reveal overflow-hidden rounded-2xl bg-orange-50 shadow-soft">
+              <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=900&q=80" alt="Kids Library" class="h-40 w-full object-cover" />
+              <div class="p-5"><i class="fa-solid fa-book text-brandOrange"></i><h4 class="mt-2 font-bold">Kids Library</h4></div>
+            </article>
+            <article class="reveal overflow-hidden rounded-2xl bg-yellow-50 shadow-soft">
+              <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92eee?auto=format&fit=crop&w=900&q=80" alt="Play Area" class="h-40 w-full object-cover" />
+              <div class="p-5"><i class="fa-solid fa-futbol text-yellow-500"></i><h4 class="mt-2 font-bold">Play Area</h4></div>
+            </article>
+            <article class="reveal overflow-hidden rounded-2xl bg-sky-50 shadow-soft">
+              <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80" alt="Activity Room" class="h-40 w-full object-cover" />
+              <div class="p-5"><i class="fa-solid fa-shapes text-brandBlue"></i><h4 class="mt-2 font-bold">Activity Room</h4></div>
+            </article>
+            <article class="reveal overflow-hidden rounded-2xl bg-orange-50 shadow-soft">
+              <img src="https://images.unsplash.com/photo-1528489496900-d841974f5290?auto=format&fit=crop&w=900&q=80" alt="Music and Dance Room" class="h-40 w-full object-cover" />
+              <div class="p-5"><i class="fa-solid fa-music text-brandOrange"></i><h4 class="mt-2 font-bold">Music & Dance Room</h4></div>
+            </article>
+            <article class="reveal overflow-hidden rounded-2xl bg-yellow-50 shadow-soft">
+              <img src="https://images.unsplash.com/photo-1459908676235-d5f02a50184b?auto=format&fit=crop&w=900&q=80" alt="Art and Craft Room" class="h-40 w-full object-cover" />
+              <div class="p-5"><i class="fa-solid fa-palette text-yellow-500"></i><h4 class="mt-2 font-bold">Art & Craft Room</h4></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="activities" class="px-5 py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-10 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandBlue">Learning Activities</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Every Day is an Adventure</h3>
+          </div>
+
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="reveal group overflow-hidden rounded-2xl bg-white shadow-soft">
+              <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80" alt="Drawing activity" class="h-48 w-full object-cover transition group-hover:scale-105" />
+              <div class="p-5"><h4 class="font-bold">Drawing</h4></div>
+            </article>
+            <article class="reveal group overflow-hidden rounded-2xl bg-white shadow-soft">
+              <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80" alt="Dance activity" class="h-48 w-full object-cover transition group-hover:scale-105" />
+              <div class="p-5"><h4 class="font-bold">Dance</h4></div>
+            </article>
+            <article class="reveal group overflow-hidden rounded-2xl bg-white shadow-soft">
+              <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80" alt="Storytelling activity" class="h-48 w-full object-cover transition group-hover:scale-105" />
+              <div class="p-5"><h4 class="font-bold">Storytelling</h4></div>
+            </article>
+            <article class="reveal group overflow-hidden rounded-2xl bg-white shadow-soft">
+              <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80" alt="Outdoor games" class="h-48 w-full object-cover transition group-hover:scale-105" />
+              <div class="p-5"><h4 class="font-bold">Outdoor Games</h4></div>
+            </article>
+            <article class="reveal group overflow-hidden rounded-2xl bg-white shadow-soft">
+              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Puzzle learning" class="h-48 w-full object-cover transition group-hover:scale-105" />
+              <div class="p-5"><h4 class="font-bold">Puzzle Learning</h4></div>
+            </article>
+            <article class="reveal group overflow-hidden rounded-2xl bg-white shadow-soft">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Craft activities" class="h-48 w-full object-cover transition group-hover:scale-105" />
+              <div class="p-5"><h4 class="font-bold">Craft Activities</h4></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white px-5 py-24" id="school-life">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-10 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandOrange">School Life</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Moments That Build Confidence</h3>
+          </div>
+
+          <div class="grid gap-5 md:grid-cols-3">
+            <img class="reveal h-64 w-full rounded-2xl object-cover shadow-soft" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80" alt="Students learning" />
+            <img class="reveal h-64 w-full rounded-2xl object-cover shadow-soft" src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=1000&q=80" alt="Classroom" />
+            <img class="reveal h-64 w-full rounded-2xl object-cover shadow-soft" src="https://images.unsplash.com/photo-1544776527-11adb58c1e18?auto=format&fit=crop&w=1000&q=80" alt="Playground" />
+            <img class="reveal h-64 w-full rounded-2xl object-cover shadow-soft md:col-span-2" src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80" alt="School event" />
+            <img class="reveal h-64 w-full rounded-2xl object-cover shadow-soft" src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=80" alt="Kids activity" />
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-brandBlue px-5 py-20 text-white">
+        <div class="mx-auto grid max-w-7xl gap-6 text-center sm:grid-cols-2 lg:grid-cols-4">
+          <div class="reveal rounded-2xl bg-white/10 p-6">
+            <p class="counter text-4xl font-black" data-target="500">0</p>
+            <p class="mt-2">Students</p>
+          </div>
+          <div class="reveal rounded-2xl bg-white/10 p-6">
+            <p class="counter text-4xl font-black" data-target="20">0</p>
+            <p class="mt-2">Teachers</p>
+          </div>
+          <div class="reveal rounded-2xl bg-white/10 p-6">
+            <p class="counter text-4xl font-black" data-target="10">0</p>
+            <p class="mt-2">Years Experience</p>
+          </div>
+          <div class="reveal rounded-2xl bg-white/10 p-6">
+            <p class="counter text-4xl font-black" data-target="100">0</p>
+            <p class="mt-2">Safety</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="events" class="bg-white px-5 py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-10 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandBlue">Events</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Celebrations & Competitions</h3>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <article class="reveal overflow-hidden rounded-2xl shadow-soft">
+              <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=80" alt="Sports Day" class="h-44 w-full object-cover" />
+              <div class="bg-sky-50 p-4"><h4 class="font-bold">Sports Day</h4></div>
+            </article>
+            <article class="reveal overflow-hidden rounded-2xl shadow-soft">
+              <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Annual Function" class="h-44 w-full object-cover" />
+              <div class="bg-orange-50 p-4"><h4 class="font-bold">Annual Function</h4></div>
+            </article>
+            <article class="reveal overflow-hidden rounded-2xl shadow-soft">
+              <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80" alt="Art Competition" class="h-44 w-full object-cover" />
+              <div class="bg-yellow-50 p-4"><h4 class="font-bold">Art Competition</h4></div>
+            </article>
+            <article class="reveal overflow-hidden rounded-2xl shadow-soft">
+              <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=80" alt="Cultural Event" class="h-44 w-full object-cover" />
+              <div class="bg-sky-50 p-4"><h4 class="font-bold">Cultural Event</h4></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-5 py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-10 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandOrange">Testimonials</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Parents Trust Shriram Smart Kids</h3>
+          </div>
+
+          <div class="relative overflow-hidden rounded-3xl bg-white shadow-soft">
+            <div id="testimonialTrack" class="flex transition-transform duration-500">
+              <article class="w-full shrink-0 p-8 sm:p-10">
+                <p class="text-lg italic text-slate-700">“The teachers are warm, patient, and deeply involved. My child has become more confident and expressive.”</p>
+                <p class="mt-4 font-bold">— Parent, Nursery</p>
+              </article>
+              <article class="w-full shrink-0 p-8 sm:p-10">
+                <p class="text-lg italic text-slate-700">“A perfect balance of academics and play. We love the discipline and joyful environment.”</p>
+                <p class="mt-4 font-bold">— Parent, Kindergarten</p>
+              </article>
+              <article class="w-full shrink-0 p-8 sm:p-10">
+                <p class="text-lg italic text-slate-700">“Safe campus, excellent activities, and responsive staff. Best preschool experience for our family.”</p>
+                <p class="mt-4 font-bold">— Parent, Playgroup</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="admissions" class="bg-gradient-to-r from-brandBlue to-cyan-500 px-5 py-24 text-white">
+        <div class="mx-auto max-w-7xl rounded-3xl bg-white/10 p-10 backdrop-blur">
+          <div class="reveal text-center">
+            <p class="text-sm font-bold uppercase tracking-widest">Admission Section</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Admissions Open for New Session</h3>
+          </div>
+
+          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="reveal rounded-2xl bg-white/10 p-5 text-center"><i class="fa-solid fa-circle-info text-2xl"></i><p class="mt-3 font-semibold">Inquiry</p></div>
+            <div class="reveal rounded-2xl bg-white/10 p-5 text-center"><i class="fa-solid fa-file-signature text-2xl"></i><p class="mt-3 font-semibold">Registration</p></div>
+            <div class="reveal rounded-2xl bg-white/10 p-5 text-center"><i class="fa-solid fa-comments text-2xl"></i><p class="mt-3 font-semibold">Interaction</p></div>
+            <div class="reveal rounded-2xl bg-white/10 p-5 text-center"><i class="fa-solid fa-circle-check text-2xl"></i><p class="mt-3 font-semibold">Confirmation</p></div>
+          </div>
+
+          <div class="mt-10 text-center">
+            <a href="#contact" class="inline-flex rounded-full bg-brandOrange px-8 py-3 font-bold text-white transition hover:bg-orange-600">Apply Now</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="bg-white px-5 py-24">
+        <div class="mx-auto max-w-4xl">
+          <div class="reveal mb-10 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandBlue">FAQ</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Frequently Asked Questions</h3>
+          </div>
+
+          <div class="space-y-4">
+            <div class="reveal rounded-2xl border border-sky-100 bg-sky-50 p-4">
+              <button class="faq-btn flex w-full items-center justify-between text-left font-bold">What age group can apply?<i class="fa-solid fa-plus"></i></button>
+              <div class="faq-content pt-2 text-slate-700">Children from playgroup to kindergarten age are welcome. Age criteria are shared during inquiry.</div>
+            </div>
+            <div class="reveal rounded-2xl border border-orange-100 bg-orange-50 p-4">
+              <button class="faq-btn flex w-full items-center justify-between text-left font-bold">How do I begin the admission process?<i class="fa-solid fa-plus"></i></button>
+              <div class="faq-content pt-2 text-slate-700">Start with inquiry, complete registration, attend interaction, and receive confirmation.</div>
+            </div>
+            <div class="reveal rounded-2xl border border-yellow-100 bg-yellow-50 p-4">
+              <button class="faq-btn flex w-full items-center justify-between text-left font-bold">Is transportation available?<i class="fa-solid fa-plus"></i></button>
+              <div class="faq-content pt-2 text-slate-700">Yes, safe transportation options are available for nearby areas in and around Chomu.</div>
+            </div>
+            <div class="reveal rounded-2xl border border-sky-100 bg-sky-50 p-4">
+              <button class="faq-btn flex w-full items-center justify-between text-left font-bold">Do you provide activity-based learning?<i class="fa-solid fa-plus"></i></button>
+              <div class="faq-content pt-2 text-slate-700">Absolutely. We use storytelling, music, art, puzzles, and outdoor play as core learning tools.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="px-5 py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-10 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandOrange">Gallery</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Photo Highlights</h3>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=700&q=80" alt="Kids playing" class="reveal h-48 w-full rounded-2xl object-cover shadow-soft transition hover:scale-[1.03]" />
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=700&q=80" alt="Class activity" class="reveal h-48 w-full rounded-2xl object-cover shadow-soft transition hover:scale-[1.03]" />
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=700&q=80" alt="Library reading" class="reveal h-48 w-full rounded-2xl object-cover shadow-soft transition hover:scale-[1.03]" />
+            <img src="https://images.unsplash.com/photo-1544776527-11adb58c1e18?auto=format&fit=crop&w=700&q=80" alt="Playground fun" class="reveal h-48 w-full rounded-2xl object-cover shadow-soft transition hover:scale-[1.03]" />
+            <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=700&q=80" alt="Dance session" class="reveal h-48 w-full rounded-2xl object-cover shadow-soft transition hover:scale-[1.03]" />
+            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=700&q=80" alt="Art and drawing" class="reveal h-48 w-full rounded-2xl object-cover shadow-soft transition hover:scale-[1.03]" />
+            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=700&q=80" alt="Group activity" class="reveal h-48 w-full rounded-2xl object-cover shadow-soft transition hover:scale-[1.03]" />
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=80" alt="Creative event" class="reveal h-48 w-full rounded-2xl object-cover shadow-soft transition hover:scale-[1.03]" />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-white px-5 py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-10 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-brandBlue">Contact</p>
+            <h3 class="mt-3 text-3xl font-black sm:text-4xl">Get in Touch</h3>
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-2">
+            <div class="reveal rounded-3xl bg-sky-50 p-8 shadow-soft">
+              <h4 class="text-2xl font-bold">Shriram Smart Kids</h4>
+              <p class="mt-4 text-slate-700">Krishna Vihar Bhojlawā<br />Chomu, Jaipur, Rajasthan</p>
+              <p class="mt-4"><i class="fa-solid fa-phone mr-2 text-brandBlue"></i> +91 98765 43210</p>
+              <p class="mt-2"><i class="fa-solid fa-envelope mr-2 text-brandBlue"></i> hello@shriramsmartkids.com</p>
+            </div>
+
+            <form class="reveal rounded-3xl bg-white p-8 shadow-soft">
+              <div class="grid gap-4">
+                <input type="text" placeholder="Name" class="rounded-xl border border-sky-100 p-3 focus:outline-none focus:ring-2 focus:ring-sky-300" />
+                <input type="tel" placeholder="Phone" class="rounded-xl border border-sky-100 p-3 focus:outline-none focus:ring-2 focus:ring-sky-300" />
+                <input type="text" placeholder="Child Age" class="rounded-xl border border-sky-100 p-3 focus:outline-none focus:ring-2 focus:ring-sky-300" />
+                <textarea rows="4" placeholder="Message" class="rounded-xl border border-sky-100 p-3 focus:outline-none focus:ring-2 focus:ring-sky-300"></textarea>
+                <button type="button" class="rounded-full bg-brandOrange px-6 py-3 font-bold text-white transition hover:bg-orange-600">Send Inquiry</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-5 pb-24">
+        <div class="reveal mx-auto max-w-7xl overflow-hidden rounded-3xl shadow-soft">
+          <iframe
+            title="School Location"
+            class="h-80 w-full"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Krishna%20Vihar%20Bhojlaw%C4%81%20Chomu%20Jaipur%20Rajasthan&output=embed"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900 px-5 py-14 text-slate-200">
+      <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="grid h-10 w-10 place-content-center rounded-lg bg-brandBlue text-white"><i class="fa-solid fa-school"></i></div>
+            <h4 class="font-bold">Shriram Smart Kids</h4>
+          </div>
+          <p class="mt-4 text-sm text-slate-400">A joyful place where little minds learn, explore, and grow.</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white">Quick Links</h4>
+          <ul class="mt-4 space-y-2 text-sm text-slate-400">
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white">Contact Details</h4>
+          <p class="mt-4 text-sm text-slate-400">Krishna Vihar Bhojlawā, Chomu, Jaipur, Rajasthan</p>
+          <p class="mt-2 text-sm text-slate-400">+91 98765 43210</p>
+          <p class="mt-2 text-sm text-slate-400">hello@shriramsmartkids.com</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white">Newsletter</h4>
+          <div class="mt-4 flex rounded-full bg-white p-1">
+            <input type="email" class="w-full rounded-full px-3 text-sm text-slate-700 focus:outline-none" placeholder="Your email" />
+            <button class="rounded-full bg-brandOrange px-4 py-2 text-xs font-bold text-white">Subscribe</button>
+          </div>
+          <div class="mt-4 flex gap-3 text-lg">
+            <a href="#" class="text-slate-400 hover:text-blue-400"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-slate-400 hover:text-pink-400"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-slate-400 hover:text-red-400"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+      const counterObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const target = Number(el.dataset.target || 0);
+            let count = 0;
+            const step = Math.ceil(target / 45);
+            const t = setInterval(() => {
+              count += step;
+              if (count >= target) {
+                count = target;
+                clearInterval(t);
+              }
+              el.textContent = `${count}${target === 20 || target === 10 ? '' : '+'}`;
+            }, 35);
+            observer.unobserve(el);
+          });
+        },
+        { threshold: 0.5 }
+      );
+      document.querySelectorAll('.counter').forEach((el) => counterObserver.observe(el));
+
+      const testimonialTrack = document.getElementById('testimonialTrack');
+      let slide = 0;
+      setInterval(() => {
+        slide = (slide + 1) % 3;
+        testimonialTrack.style.transform = `translateX(-${slide * 100}%)`;
+      }, 4200);
+
+      document.querySelectorAll('.faq-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector('i');
+          const isOpen = content.style.maxHeight;
+          document.querySelectorAll('.faq-content').forEach((c) => (c.style.maxHeight = null));
+          document.querySelectorAll('.faq-btn i').forEach((i) => i.className = 'fa-solid fa-plus');
+          if (!isOpen) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.className = 'fa-solid fa-minus';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
